@@ -10,8 +10,16 @@ function mapArrayImperative(arr, func) {
     return newArray;
 }
 
-const numbers = [1, 2, 3, 4, 5, 6]
+function doubleNumber(num) {
+    return num * 2;
+}
 
-console.log(mapArrayDeclarative(numbers)) // Declarative
+const numbers = [1, 2, 3, 4, 5];
 
-console.log(mapArrayImperative(numbers)) // Imperative
+const doubledNumbersImperative = mapArrayImperative(numbers, doubleNumber);
+
+const doubledNumbersDeclarative = mapArrayDeclarative(numbers, doubleNumber);
+
+console.log(doubledNumbersImperative);
+
+console.log(doubledNumbersDeclarative)
